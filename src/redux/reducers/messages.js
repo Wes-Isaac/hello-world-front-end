@@ -10,7 +10,7 @@ const messageReducer = (state = initState, action) => {
 };
 
 export const fetchmessage = () => async (dispatch) => {
-  await fetch('http://127.0.0.1:3020/')
+  await fetch('http://localhost:3000')
     .then((response) => response.json())
     .then((data) => {
       dispatch({ type: 'COMPLETE_MESSAGE', payload: data });
